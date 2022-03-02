@@ -1,0 +1,33 @@
+{% extends 'uygulama/base.html' %}
+
+{% block title %}
+    <title>Giriş Yap</title>
+{% endblock %}
+
+{% block style_block %}
+    <style>
+        body {
+            background: url("https://cdn.wallpapersafari.com/74/98/ziDycY.jpg");
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+    <div class="jumbotron">
+        {% if user.is_authenticated %}
+            <h3>Zaten giriş yapmışsınız</h3>
+        {% else %}
+            <h1>Giriş Yap</h1>
+            <br><br>
+            <form action="{% url 'uygulama:giris' %}" method="POST">
+                {% csrf_token %}
+                <label for="username">Kullanıcı adı: </label>
+                <input type="text" name="username">
+
+                <label for="password">Şifre: </label>
+                <input type="password" name="password">
+                <input class="btn btn-primary" type="submit" value="Giriş">
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

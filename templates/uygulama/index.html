@@ -1,0 +1,28 @@
+{% extends 'uygulama/base.html' %}
+
+{% block title %}
+    <title>Psikonline</title>
+{% endblock %}
+
+{% block style_block %}
+    <style>
+        body {
+            background: url("https://cdn.wallpapersafari.com/74/98/ziDycY.jpg");
+        }
+    </style>
+{% endblock%}
+
+{% block body_block %}
+    <h1 class="text-primary">Psikonline'a Hoş Geldin</h1>
+    <br>
+    <p class="text-primary"><b>Uygulamayı kullanarak ücretsiz psikolojik destek alabilirsin.
+        Lisans diplomasına sahip ve alanlarında yetkin psikolog ekibimizle
+        dilediğiniz zaman bize ulaşabilirsiniz.</b>
+    </p>
+    <br>
+    <p style="color: whitesmoke;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni deleniti repellendus fugit corrupti praesentium enim at repudiandae iste ipsam fugiat pariatur illo, quam eum velit minus veniam animi. Fugiat iste non reprehenderit ullam saepe obcaecati, officiis quasi quam quod sint eius voluptates beatae aliquam voluptate laborum nobis exercitationem illum impedit explicabo error id quae sit nostrum. Blanditiis, provident tempore. Omnis temporibus neque sunt repellendus, dolores ipsam ea deserunt odio rem magni qui adipisci sit? Laboriosam deleniti illum et ipsa maiores. Pariatur animi aliquam magnam vitae commodi quas quasi, ratione autem numquam rerum consequatur neque repellat ipsum, blanditiis, sapiente a suscipit id error. Neque reiciendis tenetur quod, sit quisquam saepe doloremque laborum tempora totam in eum fuga quam odio ducimus cupiditate!</p>
+    <br>
+    <p style="color: whitesmoke;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe deleniti repudiandae quam soluta minima laudantium voluptatum non hic iusto tempore distinctio, nam vitae natus sit culpa harum corrupti. Quia numquam porro eos eum voluptates culpa, minima hic in beatae.</p>
+    <br>
+    <a class="btn btn-primary btn-lg btn-block" href="{% url 'danisma:danisma' %}">Hemen Danış!</a>
+{% endblock %}

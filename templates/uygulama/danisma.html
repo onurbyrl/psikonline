@@ -1,0 +1,38 @@
+{% extends 'uygulama/base.html' %}
+
+{% block title %}
+    <title>Danışma</title>
+{% endblock %}
+
+{% block style_block %}
+    <style>
+        body {
+            background: url("https://cdn.wallpapersafari.com/74/98/ziDycY.jpg");
+        }
+        .jumbotron {
+            background: rgb(96, 96, 96); /* This is for ie8 and below */
+            background: rgba(97, 97, 97, 0.386);
+            color: #337ab7;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+    {% if user.is_authenticated %}
+        <div class="jumbotron">
+            <h1>Hemen Danış</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <br>
+                {{ danisma_formu.as_p }}
+                <br>
+                <p style="font-size: small; color: white;">NOT: gerçek isminizi kullanmayabilirsiniz fakat mail adresinizi doğru yazdığınızdan emin olunuz!</p>
+                <br>
+                <input class="btn btn-primary btn-lg" type="submit" value="Gönder">
+            </form>
+        </div>
+    {% else %}
+        <h3 style="color: #337ab7;">Lütfen önce giriş yapınız</h3>
+    {% endif %}
+{% endblock %}

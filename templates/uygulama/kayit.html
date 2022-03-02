@@ -1,0 +1,29 @@
+{% extends 'uygulama/base.html' %}
+
+{% block title %}
+    <title>Kayıt Ol</title>
+{% endblock %}
+
+{% block style_block %}
+    <style>
+        body {
+            background: url("https://cdn.wallpapersafari.com/74/98/ziDycY.jpg");
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+    <div class="jumbotron">
+        {% if registered %}
+        <h1>Bizi tercih ettiğiniz için teşekkür ederiz :)</h1>
+    {% else %}
+        <h1>Ücretsiz Kayıt Ol!</h1>
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ kayit_formu.as_p }}
+            <input class="btn btn-primary" type="submit" value="Kayıt Ol">
+        </form>
+    {% endif %}
+    </div>
+    
+{% endblock %}
