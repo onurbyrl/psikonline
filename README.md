@@ -1,5 +1,5 @@
 # psikonline
-Psikonline is the project that allow patients to send their messages to psychologists. 
+Psikonline is the web app that allows patients to send their messages to psychologists. 
 
 Before sending message, users have to be registered first.
 Then they have to login.
